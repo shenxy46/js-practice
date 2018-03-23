@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>calculator</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 显示框 -->
+        <input type="text" id="textfiled" onfocus="this.blur();">
+        <table id="click_btn">
+            <tr>
+                <td>
+                    <button onclick="clearscreen()" value="AC">AC</button>
+                </td>
+                <td>
+                    <button onclick="negative()" value="±">±</button>
+                </td>
+                <td>
+                    <button onclick="persent()" value="%">%</button>
+                </td>
+                <td>
+                    <button onclick="equal()" value="=">=</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="command(1)" value="1">1</button>
+                </td>
+                <td>
+                    <button onclick="command(2)" value="2">2</button>
+                </td>
+                <td>
+                    <button onclick="command(3)" value="3">3</button>
+                </td>
+                <td>
+                    <button onclick="plus()" value="+">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="command(4)" value="4">4</button>
+                </td>
+                <td>
+                    <button onclick="command(5)" value="5">5</button>
+                </td>
+                <td>
+                    <button onclick="command(6)" value="6">6</button>
+                </td>
+                <td>
+                    <button onclick="minus()" value="-">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="command(7)" value="7">7</button>
+                </td>
+                <td>
+                    <button onclick="command(8)" value="8">8</button>
+                </td>
+                <td>
+                    <button onclick="command(9)" value="9">9</button>
+                </td>
+                <td>
+                    <button onclick="multiplication()" value="*">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="command(0)" class="btn" value="0">0</button>
+                </td>
+                <td>
+                    <button onclick="dot()" value=".">.</button>
+                </td>
+                <td>
+                    <button onclick="division()" value="/">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="sin()" value="sin">sin</button>
+                </td>
+                <td>
+                    <button onclick="cos()" value="cos">cos</button>
+                </td>
+                <td>
+                    <button onclick="tan()" value="tan">tan</button>
+                </td>
+                <td>
+                    <button onclick="sqrt()" value="√">√</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="calculator.js"></script>
+</body>
+
+</html>
