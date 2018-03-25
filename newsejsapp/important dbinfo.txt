@@ -1,0 +1,5 @@
+host: localhost,
+user: news,
+password: 123,
+database: mynewsql,
+port:3000
