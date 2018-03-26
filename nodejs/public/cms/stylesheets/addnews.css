@@ -1,0 +1,152 @@
+*{
+	margin:0;
+	padding:0;
+}
+html{
+}
+body{
+	/*min-width: 1300px;*/
+	min-width: 1110px;
+}
+a{
+	text-decoration:none !important;
+}
+header{
+	height: 100px;
+	background-color: #ADD8E6;
+	/*padding:auto,30px,auto,80px;*/
+	/*text-align: center;*/
+}
+/*标题div属性设置*/
+.title{
+	/*width: 400px;*/
+	height: 40px;
+	/*background-color: red;*/
+	float: left;
+	margin-top: 37px;
+	margin-left: 50px;
+	font-size: 26px;
+	color: #ffffff;
+}
+/*底部容器属性*/
+.header_con{
+	float: right;
+}
+/*顶部图标div属性*/
+.email, .mg ,.contacts, .Notice, .cloud ,.from,.collection, .exit{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-top: 25px;
+	margin-right: 50px;
+}
+/*底部图片鼠标悬停效果*/
+.email:hover,.mg:hover,.contacts:hover, .Notice:hover, .cloud:hover ,.from:hover,.collection:hover, .exit:hover{
+-webkit-animation:bounce 1s .2s ease both;
+-moz-animation:bounce 1s .2s ease both;
+}
+/*底部图片鼠标悬停效果动画*/
+@-webkit-keyframes bounce{
+0%,20%,50%,80%,100%{-webkit-transform:translateY(0)}
+40%{-webkit-transform:translateY(-30px)}
+60%{-webkit-transform:translateY(-15px)}
+}
+@-moz-keyframes bounce{
+0%,20%,50%,80%,100%{-moz-transform:translateY(0)}
+40%{-moz-transform:translateY(-30px)}
+60%{-moz-transform:translateY(-15px)}
+}
+/*设置背景图片*/
+.email{
+	background: url("../img/3.png") round;
+}
+.mg{
+	background: url("../img/2.net.png") round;
+}
+.contacts{
+	background: url("../img/4.png") round;
+}
+.Notice{
+	background: url("../img/5.png") round;
+}
+.cloud{
+	background: url("../img/6.png") round;
+}
+.from{
+	background: url("../img/email.png") round;
+}
+.collection{		
+	background: url("../img/8.png") round;
+}
+.exit{
+	background: url("../img/9.png") round;
+	margin-right: 20px;
+}
+
+.left-con{
+	float:left;
+	width: 200px;
+	height: 800px;
+	background-color: #E6E6FA;
+}
+/*左侧导航div属性效果*/
+.email_button:hover ,.mg_button:hover ,.contacts_button:hover ,.notice_button:hover ,.from_button:hover ,.collection_button:hover,.cloud_button:hover{
+	
+	border: 2px solid red;
+	background-color: blue:;
+	
+}
+/*左侧导航div样式*/
+.email_button ,.mg_button ,.contacts_button ,.notice_button ,.from_button ,.collection_button,.cloud_button{
+	width: 190px;
+	height: 30px;
+	border: 1px solid #999;
+	border-bottom-color: #E6E6FA;
+	border-radius:4px;
+	padding-top:10px;
+	padding-left: 8px;
+	font-size: 10px;
+}
+.cloud_button{
+	border-bottom: 1px solid #999;
+}
+.img_div{
+	height: 30px;
+	width: 30px;
+	font-size: 16px;
+	float: right;
+}
+.inner-con{
+	width: 100%;
+	height: 100px;
+	/*background: #999;*/
+	padding-left: 190px;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+.inner-con1{
+	width: 900px;
+	height: 100px;
+	/*background: #900;*/
+	margin:0px auto 0 auto;
+	/*padding-left: 190px;*/
+}
+.form-group1 label{
+	display: block;
+	float: left;
+	margin-right: 30px;
+	width: 30px;
+	padding-top: 5px;
+} 
+.form-control{
+	width: 400px;
+}
+
+@media screen and (min-width:600px) {
+	
+	
+}
+/*@media screen and (webkit-min-device-pixel-ratio: 2) {*/
+@media screen and (max-width:  600px)  {
+
+｝

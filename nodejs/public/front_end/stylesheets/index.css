@@ -1,0 +1,87 @@
+
+/*@media screen and (webkit-min-device-pixel-ratio: 2) {*/
+@media screen and (max-width:  600px)  {
+*{
+	margin:0;
+}
+article{
+	background-color: #fff;
+	margin-top:0;
+	margin-bottom: 0;
+}
+.head{
+	background: #2786fb;
+	width: 100%;
+	height: 120px;
+	padding-top: 10px;
+}
+.top_m{
+	width: 100px;
+	height: 25px;
+	background: url("../img/1.png") round;
+	margin:0px auto 0 auto ;
+}
+.hr{
+	height: 1px;
+	width: 98%;
+	background: #5dabf0;
+	margin:5px auto 0 auto;
+}
+.content{
+	color: #fff;
+	text-align:center;
+	margin-top: 5px;
+}
+.recommend,.home,.location,.pic,.entertainment,.title{
+	border-right: 1px solid #5dabf0;
+}
+
+.img{
+	width: 95%;
+	margin:10px auto 0 auto ;
+	background: #fff;
+	height: 230px;
+}
+.index-list-item{
+	padding-top: 5px;
+	width: 95%;
+	margin:10px auto 0 auto ;
+	border-top: 1px solid #eee;
+	height: 80px;
+	/*background: #eee;*/
+
+}
+.index-list-item-img{
+	float: left;
+	margin-right: 5px;
+
+}
+.index-list-item-text{
+	height: 50px;
+
+}
+.index-list-item-bottom{
+	color: #aaa;
+	font-size: 6px;
+	margin-bottom: 0px;
+
+}
+.tip-time{
+	float: left;
+}
+.tip-fillred{
+	float: right;
+	background:#f00;
+	color: #fff;
+	padding:2px;
+
+}
+.item-img{
+	width:100px;
+	height:70px;
+}
+.home-list{
+	display: none;
+}
+}
+	

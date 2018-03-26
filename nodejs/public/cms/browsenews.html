@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>新闻内容管理系统</title>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/browsenews.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.css">
+   	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+   	<meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+	<header>
+	<a href="./index.html"> <div class="title">新闻内容管理系统</div> </a>
+		<div class="header_con">  
+			<a href="./student_info.html"> <div class="email"></div> </a>
+			<a href="./student_info.html"> <div class="mg"></div> </a>
+			<a href="./student_info.html"> <div class="contacts"></div> </a>
+			<a href="./student_info.html"> <div class="Notice"></div> </a>
+			<a href="./student_info.html"> <div class="cloud"></div> </a>
+			<a href="./student_info.html"> <div class="from"></div> </a>
+			<a href="./student_info.html"> <div class="collection"></div> </a>
+			<a href="./login.html"> <div class="exit"> </div> </a>
+		</div>
+	</header>
+	<article>
+		<div class="list-delete-con">
+			<form action="http://localhost:3000/revise"  method = "post">
+			  <div class="form-group">
+			    <label for="">id</label>
+			    <input type="text" class="id-input form-control"  
+			    name="id">
+			  </div>
+		  	  <div class="form-group">
+		    	<label for="">newstitle</label>
+			    <input type="text" class="newstitle-input form-control" 
+			    name="newstitle">
+		  	  </div>
+		  	  <div class="form-group">
+		    	<label for="">newssimg</label>
+			    <input type="text" class="newsimg-input form-control" 
+			    name="newsimg">
+		  	  </div>
+		  	  <div class="form-group">
+		    	<label for="">newscontent</label>
+			    <input type="text" class="newscontent-input form-control" 
+			    name="newscontent">
+		  	  </div>
+		  	  <div class="form-group">
+		    	<label for="">newsdata</label>
+			    <input type="date" class="newsdata-input form-control" 
+			    name="newsdata">
+		  	  </div>
+		  	  <div class="form-group">
+		    	<label for="">time</label>
+			    <input type="text" class="time-input form-control" 
+			    name="time">
+		  	  </div>
+		  	  <div class="form-group">
+		    	<label for="">newstype</label>
+			    <input type="text" class="newstype-input form-control" 
+			    name="newstype">
+		  	  </div>
+  			<button type="submit" class="btn btn-default">Submit</button>
+  			<button type="reset" class="b_res btn btn-default">reset</button>
+			</form>
+		</div>
+		<div class="left-con">   <!-- 左侧导航栏 -->
+			<a href=""> 
+			 	<div class="email_button">
+			 		系统设置
+			 		<div class="img_div">></div>
+			 	</div>
+			 </a>
+			<a href="">
+				<div class="mg_button">分类管理<div class="img_div">></div></div>
+			</a>
+			<a href="./addnews.html">
+				<div class="contacts_button">添加新闻<div class="img_div">></div></div>
+			</a>
+			<a href="">
+			<div class="notice_button">查看新闻<div class="img_div">></div></div>
+			</a>
+			<a href="">
+				<div class="from_button">删除新闻<div class="img_div">></div></div>
+			</a>
+			<a href="">
+				<div class="collection_button">修改新闻<div class="img_div">></div></div>
+			</a>
+			<a href="">
+				<div class="cloud_button">版本信息<div class="img_div">></div></div>
+			</a>
+		</div>
+		<div class="inner">
+			<table class="table table-striped newstable1">
+				<tr>
+				    <td width="38" height="35">id</td>
+				    <td width="61">newstitle</td>
+				    <td width="60">newsimg</td>
+				    <td width="82">newconten</td>
+				    <td width="92">data</td>
+				    <td width="100">time</td>
+				    <td width="90">newstype</td>
+				    <td class="yy" width="60">修改</td>
+				    <td class="yy" width="60">删除</td>
+			  	</tr>
+			</table>
+	</article>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(window).on("load",function(){
+		$.ajax({
+			url:'/browsenews',
+			dataType:"json",
+			success:function(data){
+				console.log(111);//data.length
+				for(var i=0;i<data.length;i++){
+					console.log(data[i].newstitle);
+					console.log(data[i].newsimg)
+				 	var tr = $("<tr>").addClass("index-list-item").appendTo($(".newstable1"));
+				 	var td = $("<td>").addClass("list-id").appendTo(tr);
+				 	td[0].innerHTML=data[i].id;
+				 	console.log(td);
+				 	var td = $("<td>").appendTo(tr);
+				 	td[0].innerHTML=data[i].newstitle;
+				 	var td = $("<td>").appendTo(tr);
+				 	// td[0].innerHTML=data[i].newsimg;
+				 	var td = $("<td>").appendTo(tr);
+				 	td[0].innerHTML=data[i].newconten;
+				 	var td = $("<td>").appendTo(tr);
+				 	td[0].innerHTML=data[i].data;
+				 	var td = $("<td>").appendTo(tr);
+				 	td[0].innerHTML=data[i].time;
+				 	var td = $("<td>").appendTo(tr);
+				 	td[0].innerHTML=data[i].newstype;
+				 	var td = $("<td>").addClass("list-modify").appendTo(tr);
+				 	td[0].innerHTML="修改";
+				 	td[0].onclick = list_modify_fun;
+				 	var td = $("<td>").addClass("list-delete").appendTo(tr);
+				 	td[0].innerHTML="删除";
+				 	td[0].onclick = list_delete_fun;
+				}
+			}
+
+		});
+	})
+	var list_modify_fun = function(){
+		// console.log($(this).siblings()[0].innerHTML);
+		$(".inner").hide();
+		$(".list-delete-con").show();
+		
+		$.ajax({
+			type: "POST",
+			url:'/modify',
+			dataType:"json",
+			data:{"id":$(this).siblings()[0].innerHTML},
+			success:function(data){
+				console.log(data);
+				$(".id-input").val(data[0].id);//data.length
+				$(".newstitle-input").val(data[0].newstitle);
+				$(".newsimg-input").val(data[0].newsimg);
+				$(".newscontent-input").val(data[0].newscontent);
+				$(".newsdata-input").val(data[0].newsdata);
+				$(".time-input").val(data[0].time);
+				$(".newstype-input").val(data[0].newstype);
+				
+			}
+		})
+	}
+	var list_delete_fun = function(){
+		
+		$.ajax({
+			type: "POST",
+			url:'/delnews',
+			dataType:"json",
+			data:{"id":$(this).siblings()[0].innerHTML},
+			success:function(data){
+					console.log(data);
+					
+			}
+
+		});
+		location.reload();
+	}
+	$('.list-modify').click(function(){
+		console.log(123);
+	});
+	$('.yy').click(function(){
+		alert(1);
+		console.log(123);
+	});
+});
+</script>
+</body>
+</html>
